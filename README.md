@@ -10,10 +10,21 @@ git clone https://github.com/zhmichael007/access-boundary-access-token.git
 cd access-boundary-access-token
 ```
 2. Create a Service Account, grant "Storage Object Admin" and "Service Account Token Creator" priviledge to it and dowanload a key file. Storage Object Admin ( roles/storage.objectAdmin ), Grants full control over objects, including listing, creating, viewing, and deleting objects.
+  <img src="./images/sa.jpg" width="350" title="Service Account">
+
 
 3. Modify the organization policy "constraints/iam.allowServiceAccountCredentialLifetimeExtension" in "IAM->Organization policies", and set the service account name created in step 2 in this policy
 
-4. Rename the service account key file to "gcs_sa_key.json" and put it to the same folder as pom.xml 
+<img src="./images/allowServiceAccountCredentialLifetimeExtension0.jpg" width="700">
+<img src="./images/allowServiceAccountCredentialLifetimeExtension.jpg" width="350">
+
+
+You will get this display after saving this policy: 
+
+<img src="./images/allowServiceAccountCredentialLifetimeExtension2.jpg" width="350">
+
+
+4. Generate a key file from this service account, rename the service account key file to "gcs_sa_key.json" and put it to the same folder as pom.xml 
 
 5. Compile and run the java code, you will see the output of the tokens each 5 seconds:
 ```
