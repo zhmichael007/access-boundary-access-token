@@ -1,5 +1,7 @@
 # access-boundary-access-token
-This is a sample code which can generate GCS access boundary access token via the service account access token, and extend the token expiration time to 12 hours.
+This is a sample code demonstrate access boundary access token generation via the service account access token, and extend the token expiration time to 12 hours.
+
+
 # Main Steps：
 1. In Debian OS:
 ```
