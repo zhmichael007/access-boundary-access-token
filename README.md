@@ -31,6 +31,8 @@ You will get this display after saving this policy:
 mvn compile
 mvn exec:java -Dexec.mainClass=com.test.AccessBoundaryTokenTest
 ```
+<img src="./images/output.jpg" width="800">
+
 
 6. Get the access token from the output and try the curl command:
 
