@@ -11,7 +11,7 @@ public class AccessBoundaryTokenTest {
     public static void main(String[] args) throws IOException {
         // service account key file
         String saKeyFile = "./gcs_sa_key.json";
-        // The Cloud Storage bucket name.
+        // The Cloud Storage bucket name. You need to replace with your own
         String bucketName = "gcs-token";
         // The Cloud Storage object prefix that resides in the specified bucket.
         String objectPrefix = "device1/1/2/3/";
