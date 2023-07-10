@@ -89,7 +89,7 @@ public class AccessBoundaryTokenTest {
         while (true) {
             AccessToken accessToken = AccessBoundaryToken.generateAccessBoundaryToken(bucketName, objectPrefix);
             System.out.println(accessToken.getTokenValue());
-            System.out.println(accessToken.getExpirationTime());
+            System.out.println("Expiration Time: "+accessToken.getExpirationTime());
             System.out.println("");
             try {
                 Thread.sleep(5000);
