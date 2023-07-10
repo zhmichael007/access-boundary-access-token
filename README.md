@@ -24,9 +24,12 @@ You will get this display after saving this policy:
 <img src="./images/allowServiceAccountCredentialLifetimeExtension2.jpg" width="350">
 
 
-4. Generate a key file from this service account, rename the service account key file to "gcs_sa_key.json" and put it to the same folder as pom.xml 
+4. Generate a key file from this service account, rename the service account key file to "gcs_sa_key.json" and put it to the same folder as pom.xml
 
-5. Compile and run the java code, you will see the output of the tokens each 5 seconds:
+
+5. Modify the Bucket name to your own in file AccessBoundaryTokenTest.java, this line: "String bucketName = "gcs-token";"
+
+6. Compile and run the java code, you will see the output of the tokens each 5 seconds:
 ```
 mvn compile
 mvn exec:java -Dexec.mainClass=com.test.AccessBoundaryTokenTest
@@ -34,7 +37,7 @@ mvn exec:java -Dexec.mainClass=com.test.AccessBoundaryTokenTest
 <img src="./images/output.jpg" width="800">
 
 
-6. Get the access token from the output and try the curl command:
+7. Get the access token from the output and try the curl command:
 
 Upload a file via the access token and curl:
 ```
@@ -47,7 +50,7 @@ curl -X POST -T ./demo.json \
 
 You will see the json output to show the upload is successful.
 
-7. Test other folder priviledge:
+8. Test other folder priviledge:
 try this command:
 ```
 curl -X POST -T ./demo.json \
