@@ -70,6 +70,11 @@ timer.scheduleAtFixedRate(ServiceAccountTokenRefreshTask,
                 Calendar.getInstance().getTime(),
                 saTokenRefreshInterval);
 ```
+1）the maximum expiration time is 12 hours
+
+2）the token length is 2k
+
+3）the restful API of GCS is POST method
 
 # Reference
 IAM storage related roles:
