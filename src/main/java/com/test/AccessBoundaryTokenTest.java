@@ -11,8 +11,8 @@ public class AccessBoundaryTokenTest {
     public static void main(String[] args) throws IOException {
         // service account key file
         String saKeyFile = "./gcs_sa_key.json";
-        // The Cloud Storage bucket name. You need to replace with your own
-        String bucketName = "gcs-token";
+        // The Cloud Storage bucket name.
+        String bucketName = "gcp-sts-test";
         // The Cloud Storage object prefix that resides in the specified bucket.
         String objectPrefix = "device1/1/2/3/";
         // token expire-in, seconds, max 12 hours, 43200 seconds
@@ -44,12 +44,17 @@ public class AccessBoundaryTokenTest {
                 Calendar.getInstance().getTime(),
                 saTokenRefreshInterval);
 
-        // generate the access boundary access token every 5 second
+        // generate the access boundary access token every 5 seconds
         while (true) {
-            AccessToken accessToken = AccessBoundaryToken.generateAccessBoundaryToken(bucketName, objectPrefix);
-            System.out.println(accessToken.getTokenValue());
-            System.out.println("Expiration Time: " + accessToken.getExpirationTime());
+            try {
+                AccessToken accessToken = AccessBoundaryToken.generateAccessBoundaryToken(bucketName, objectPrefix);
+                System.out.println(accessToken.getTokenValue());
+                System.out.println("Expiration Time: " + accessToken.getExpirationTime());
             System.out.println("");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            
             try {
                 Thread.sleep(5000);
             } catch (Exception e) {
