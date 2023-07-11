@@ -63,6 +63,9 @@ You will see the message:
 "message": "xxx.iam.gserviceaccount.com does not have storage.objects.create access to the Google Cloud Storage object.
 
 
+# Attention 
+When generate the access token from the Service Account token, the boundary access token will inherit the expiration time from the Service Account token. And consider the IAM API quota, you'd better refresh the Service Account token intervally. In the sample code file AccessBoundaryTokenTest.java, I set a timer with 60s interval to refresh the Service Account access token. 
+
 # Reference
 IAM storage related roles:
 https://cloud.google.com/storage/docs/access-control/iam-roles
