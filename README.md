@@ -77,6 +77,9 @@ timer.scheduleAtFixedRate(ServiceAccountTokenRefreshTask,
 3）the restful API of GCS is POST method
 
 # Reference
+IamCredentialsClient:
+https://cloud.google.com/java/docs/reference/google-cloud-iamcredentials/latest/com.google.cloud.iam.credentials.v1
+
 IAM storage related roles:
 https://cloud.google.com/storage/docs/access-control/iam-roles
 
