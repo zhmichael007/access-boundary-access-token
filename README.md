@@ -76,6 +76,13 @@ timer.scheduleAtFixedRate(ServiceAccountTokenRefreshTask,
 
 3）the restful API of GCS is POST method
 
+# Quota Load Test
+Need to promote the quota "IAM Service Account Credentials API->Generate credentials request per minute" and "Security Token Service API->Token exchange requests per minute" if you need. 
+
+Use AccessBoundaryTokenLoadTestSAToken.java for Service Account Token load test and AccessBoundaryTokenLoadTestSTS.java for STS token load test. Modify the main class in pom.xml. 
+
+ <img src="./images/loadtest.jpg" title="Load Test">
+
 # Reference
 IamCredentialsClient:
 https://cloud.google.com/java/docs/reference/google-cloud-iamcredentials/latest/com.google.cloud.iam.credentials.v1
