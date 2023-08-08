@@ -78,7 +78,7 @@ timer.scheduleAtFixedRate(ServiceAccountTokenRefreshTask,
 
 # Quota Load Test
 Need to promote the quota "IAM Service Account Credentials API->Generate credentials request per minute" and "Security Token Service API->Token exchange requests per minute" If you have a lot of clients need to obtain short-live credentials. 
-Use AccessBoundaryTokenLoadTestSAToken.java for Service Account Token load test and AccessBoundaryTokenLoadTestSTS.java for STS token load test. Modify the main class in pom.xml. 
+Use AccessBoundaryTokenLoadTestSAToken.java for Service Account Token load test and AccessBoundaryTokenLoadTestSTS.java for STS token load test. Modify the <mainClass> in pom.xml if you need.
 
  <img src="./images/loadtest.jpg" title="Load Test">
 
