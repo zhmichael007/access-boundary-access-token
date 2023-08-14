@@ -96,7 +96,7 @@ upload GCS file via token+restful:
 https://cloud.google.com/storage/docs/uploading-objects
 
 download GCS file via token+restful:
-https://cloud.google.com/storage/docs/downloading-object
+https://cloud.google.com/storage/docs/downloading-objects#permissions-rest
 
 
 
